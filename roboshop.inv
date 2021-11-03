@@ -1,5 +1,5 @@
 [frontend]
-frontend.roboshop.internal
+frontend-dev.roboshop.internal
 [cart]
 cart.roboshop.internal
 [mongodb]
