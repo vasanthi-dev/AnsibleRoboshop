@@ -7,3 +7,7 @@
     state: restarted
     name: nginx
     enabled: yes
+- name: Download Frontend Code
+  include_role:
+    name: common
+    tasks_from: download
