@@ -26,7 +26,7 @@
     tasks_from: download
 
 - name: Load Schema
-  Community.mongodb.mongodb_shell:
+  community.mongodb.mongodb_shell:
     file: "/tmp/mongodb-main/{{item}}.js"
     idempotent: yes
   loop:
