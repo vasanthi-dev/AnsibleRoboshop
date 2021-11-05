@@ -1,0 +1,32 @@
+- name: Install NodeJS
+  ansible.builtin.yum:
+    yum:
+      name: ["nodejs", "make", "gc-c++" ]
+      state: present
+
+- name: Add roboshop app user
+  ansible.builtin.user:
+    user:
+      name: roboshop
+
+- name: Download code
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download
+
+- name: Remove Existing Code
+  ansible.builtin.file:
+    path: /home/roboshop/catalogue
+    state: absent
+
+- name: Copy App Code
+  copy:
+    src: /tmp/catalogue-main
+    dest: /home/roboshop/catalogue
+    remote_src: true
+  become_user: roboshop
+
+- name: Install Nodejs Dependencies
+  community.general.npm:
+    path: /home/roboshop/catalogue
+  become_user: roboshop
