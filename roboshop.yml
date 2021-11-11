@@ -19,51 +19,51 @@
   roles:
    - catalogue
 
-- name: setup mysql
-  hosts: mysql
-  become: true
-  tags: mysql
-  roles:
-   - mysql
-
-- name: setup shipping
-  hosts: shipping
-  become: true
-  tags: shipping
-  roles:
-   - shipping
-
-- name: setup payment
-  hosts: payment
-  become: true
-  tags: payment
-  roles:
-   - payment
-
-- name: setup cart
-  hosts: cart
-  become: true
-  tags: cart
-  roles:
-   - cart
-
-- name: setup user
-  hosts: user
-  become: true
-  tags: user
-  roles:
-   - user
-
-- name: setup redis
-  hosts: redis
-  become: true
-  tags: redis
-  roles:
-   - redis
-
-- name: setup rabbitmq
-  hosts: rabbitmq
-  become: true
-  tags: rabbitmq
-  roles:
-   - rabbitmq
+#- name: setup mysql
+#  hosts: mysql
+#  become: true
+#  tags: mysql
+#  roles:
+#   - mysql
+#
+#- name: setup shipping
+#  hosts: shipping
+#  become: true
+#  tags: shipping
+#  roles:
+#   - shipping
+#
+#- name: setup payment
+#  hosts: payment
+#  become: true
+#  tags: payment
+#  roles:
+#   - payment
+#
+#- name: setup cart
+#  hosts: cart
+#  become: true
+#  tags: cart
+#  roles:
+#   - cart
+#
+#- name: setup user
+#  hosts: user
+#  become: true
+#  tags: user
+#  roles:
+#   - user
+#
+#- name: setup redis
+#  hosts: redis
+#  become: true
+#  tags: redis
+#  roles:
+#   - redis
+#
+#- name: setup rabbitmq
+#  hosts: rabbitmq
+#  become: true
+#  tags: rabbitmq
+#  roles:
+#   - rabbitmq
