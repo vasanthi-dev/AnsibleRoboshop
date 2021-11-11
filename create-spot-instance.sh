@@ -21,7 +21,7 @@ CREATE(){
   UPDATE_DNS_RECORDS $1
 }
 
-if [ $1 == "all" ]; then
+if [ $1 = "all" ]; then
   ALL=(frontend user mongodb redis catalogue cart shipping payment rabbitmq mysql)
   for component in ${ALL[*]}; do
   echo "Creating Instance - $component"
