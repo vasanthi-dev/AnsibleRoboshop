@@ -19,7 +19,7 @@
 
 - name: Copy App Code
   copy:
-    src: /tmp/catalogue-main
+    src: /tmp/catalogue-main/
     dest: /home/roboshop/catalogue
     remote_src: true
   become_user: roboshop
