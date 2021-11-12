@@ -1,17 +1,3 @@
-#
-#    Shipping Service
-#    So we need to load that schema into the database, So those applications will detect them and run accordingly.
-#
-#    To download schema, Use the following command
-#
-#    # curl -s -L -o /tmp/mysql.zip "https://github.com/roboshop-devops-project/mysql/archive/main.zip"
-#    Load the schema for Services.
-#
-#    # cd /tmp
-#    # unzip mysql.zip
-#    # cd mysql-main
-#  # mysql -u root -pRoboShop@1 <shipping.sql
-
 - name: Setup MySQL Repo
   ansible.builtin.copy:
     src: mysql.repo
