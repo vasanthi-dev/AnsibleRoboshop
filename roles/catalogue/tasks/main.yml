@@ -32,7 +32,7 @@
 - name: Update systemd file
   template:
     src: systemd.service
-    dest: /etc/systemd/catalogue.service
+    dest: /etc/systemd/system/catalogue.service
 
 - name: start catalogue service
   systemd:
