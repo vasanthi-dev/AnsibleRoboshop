@@ -32,14 +32,14 @@
   tags: shipping
   roles:
    - shipping
-#
-#- name: setup payment
-#  hosts: payment
-#  become: true
-#  tags: payment
-#  roles:
-#   - payment
-#
+
+- name: setup payment
+  hosts: payment
+  become: true
+  tags: payment
+  roles:
+   - payment
+
 - name: setup cart
   hosts: cart
   become: true
@@ -60,10 +60,10 @@
   tags: redis
   roles:
    - redis
-#
-#- name: setup rabbitmq
-#  hosts: rabbitmq
-#  become: true
-#  tags: rabbitmq
-#  roles:
-#   - rabbitmq
+
+- name: setup rabbitmq
+  hosts: rabbitmq
+  become: true
+  tags: rabbitmq
+  roles:
+   - rabbitmq
