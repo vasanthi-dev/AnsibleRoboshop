@@ -34,9 +34,9 @@
     src: systemd.service
     dest: /etc/systemd/catalogue.service
 
-- name: start catalogue service
-  systemd:
-    name: catalogue
-    state: restarted
-    enabled: yes
-    daemon_reload: yes
+#- name: start catalogue service
+#  systemd:
+#    name: catalogue
+#    state: restarted
+#    enabled: yes
+#    daemon_reload: yes
