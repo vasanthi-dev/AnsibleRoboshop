@@ -1,0 +1,12 @@
+- name: Install Maven
+  yum:
+    name: maven
+    state: present
+
+- name: Download code
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download
+  vars:
+    APP_LOCATION: "/home/roboshop/{{COMPONENT}}"
+
