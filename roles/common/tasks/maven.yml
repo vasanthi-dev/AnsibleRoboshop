@@ -14,7 +14,7 @@
 - name: Make Maven Package
   ansible.builtin.shell:
        cmd: mvn clean package && mv target/shipping-1.0.jar shipping.jar
-       chdir: "/home/roboshop/{COMPONENT}"
+       chdir: "/home/roboshop/{{COMPONENT}}"
   become_user: roboshop
 
 - name: Download systemd
