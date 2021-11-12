@@ -19,19 +19,19 @@
   roles:
    - catalogue
 
-#- name: setup mysql
-#  hosts: mysql
-#  become: true
-#  tags: mysql
-#  roles:
-#   - mysql
-#
-#- name: setup shipping
-#  hosts: shipping
-#  become: true
-#  tags: shipping
-#  roles:
-#   - shipping
+- name: setup mysql
+  hosts: mysql
+  become: true
+  tags: mysql
+  roles:
+   - mysql
+
+- name: setup shipping
+  hosts: shipping
+  become: true
+  tags: shipping
+  roles:
+   - shipping
 #
 #- name: setup payment
 #  hosts: payment
