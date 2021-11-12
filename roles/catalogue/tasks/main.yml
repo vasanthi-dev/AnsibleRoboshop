@@ -30,7 +30,7 @@
   become_user: roboshop
 
 - name: Update systemd file
-  template:
+  templates:
     src: systemd.service
     dest: /etc/systemd/catalogue.service
 
