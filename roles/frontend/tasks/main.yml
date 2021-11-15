@@ -3,10 +3,12 @@
     name: nginx
     state: latest
 
-- name: Download Frontend Code
+- name: Download code
   include_role:
     name: common
     tasks_from: download
+  vars:
+    APP_LOCATION: /usr/share/nginx/html/
 
 - name: Remove old content
   ansible.builtin.file:
