@@ -29,4 +29,10 @@
   ansible.builtin.lineinfile:
     path: "/home/roboshop/{{COMPONENT}}/{{COMPONENT}}.ini"
     regexp: '^gid'
-    line: uid = {{app_user_info.Gid}}
+    line: uid = {{app_user_info.gid}}
+
+- name: Download systemd
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: systemd
+
