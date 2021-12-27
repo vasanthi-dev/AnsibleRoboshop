@@ -13,6 +13,7 @@ CREATE(){
    then
     # shellcheck disable=SC1072
     aws ec2 run-instances --launch-template LaunchTemplateId=lt-099eb0b79a90eeba3,Version=7 --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$1}]" "ResourceType=spot-instances-request,Tags=[{Key=Name,Value=$1}]" | jq &>>/dev/null
+    UPDATE_DNS_RECORDS $1
   else
     echo -e  "\e[1;33m$1Instance already exists\e[0m"
     UPDATE_DNS_RECORDS $1
