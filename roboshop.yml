@@ -67,3 +67,5 @@
   tags: rabbitmq
   roles:
    - rabbitmq
+
+
